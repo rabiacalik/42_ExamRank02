@@ -9,15 +9,15 @@ char    *ft_strcpy(char *s1, char *s2)
         s1[i] = s2[i];
         i++;
     }
-    s1[i] = '\n';
+    s1[i] = '\0';
     return(s1);
 }
 
 int main()
 {
-    char *r = "rabia";
-    char *c = "calik";
+    char r[] = "rabia";
+    char c[] = "calik";
 
     ft_strcpy(r, c);
-    printf("%s", &r);
+    printf("%s", r);
 }

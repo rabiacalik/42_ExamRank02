@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void main(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int i;
 	i = 0;
