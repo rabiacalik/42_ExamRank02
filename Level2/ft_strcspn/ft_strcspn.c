@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-//str c spn --> string complement span --> dizi tamamlama araligi
 size_t ft_strcspn(const char *s, const char *reject)
 {
     int i = 0;

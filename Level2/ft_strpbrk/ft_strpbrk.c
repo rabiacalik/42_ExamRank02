@@ -21,6 +21,7 @@ char *ft_strpbrk(const char *s1, const char *s2)
     return NULL;
 }
 
+/*
 int main ()
 {
     const char* str1 = "rabia -calik!";
@@ -32,3 +33,4 @@ int main ()
     printf("aranan karakterlerden bulunan : %c\n", *sonuc);
     printf("Bulunan karakterin adresi : %p\n", sonuc);
 }
+*/
