@@ -1,4 +1,4 @@
-str cmp --> string compare --> dizi karşılaştırması
+str cmp --> string compare --> dizi karşılaştırması '\n'
 **This is bold te**
 
 - iki tane dizi alıcak 
