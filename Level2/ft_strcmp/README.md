@@ -1,5 +1,5 @@
 str cmp --> string compare --> dizi karşılaştırması
-**int    ft_strcmp(char *s1, char *s2);**
+**This is bold te**
 
 - iki tane dizi alıcak 
 - her dizinin elemanlarına sırasıyla bakıp
