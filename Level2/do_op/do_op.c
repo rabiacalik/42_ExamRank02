@@ -23,7 +23,6 @@ int main (int argc, char **argv)
             result = a * b;
         else if (argv[2][0] == '/')
             result = a / b;
-        printf("%d", result);
     }
     write(1, "\n", 1);
 }

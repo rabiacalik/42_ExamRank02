@@ -15,7 +15,7 @@ int ft_atoi(const char *str)
         carpan = -1;
         i++;
     }
-    while (str[i] != '\0')
+    while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
     {
         sonuc = sonuc * 10;
         sonuc = sonuc + (str[i] - '0');
