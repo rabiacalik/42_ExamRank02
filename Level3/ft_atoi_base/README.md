@@ -1,0 +1,1 @@
+anlamadım tekrar bak
