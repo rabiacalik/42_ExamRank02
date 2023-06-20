@@ -1,92 +1,81 @@
 #include <unistd.h>
 
-void ft_putchar(char c)
+int is_prime(int num)
 {
-    write(1, &c, 1);
-}
+    int i;
 
-void ft_putnbr(int nb)
-{
-    if(nb < 0)
+    i = 2;
+    if (num == 2)
+        return 1;
+    while (i <= num/2)
     {
-        ft_putchar('-');
-        nb = -nb;
-    }
-    if(nb >= 10)
-    {
-        ft_putnbr(nb / 10);
-        nb = nb % 10;
-    }
-    if(nb < 10)
-    {
-        ft_putchar(nb + '0');
-    }
-}
-
-
-int ft_atoi(char *str)
-{
-    int i = 0;
-    int carpan = 1;
-    int sonuc = 0;
-
-    while(str[i] <= 32)
-        i++;
-
-    if(str[i] == '-')
-    {
-        carpan = -1;
-        i++;
-    }
-    else if(str[i] == '+')
-        i++;
-    
-    while(str[i] && str[i] >= '0' && str[i] <= '9')
-    {
-        sonuc = sonuc * 10;
-        sonuc = sonuc + (str[i] - '0');
-        i++;
-    }
-    return (sonuc * carpan);
-}
-
-int prime(int num)
-{
-    int i = 3;
-
-    if (num < 2 || num % 2 == 0)
-        return 0;
-    
-    if(num == 2)
-        return 2;
-
-    while(i < num)
-    {
-        if(num % i == 0)
+        if (num % i == 0)
             return 0;
-        i += 2;
+        i++;
     }
-    return i;
+    return 1;
+}
+
+int ft_atoi_mini(char *str)
+{
+    int i;
+    int res;
+    int sign;
+
+    if (!str)
+        return 0;
+    i = 0;
+    sign = 1;
+    res = 0;
+    if (str[i] == '-')
+    {
+        sign *= -1;
+        i++;
+    }
+    while (str[i])
+    {
+        res = (res * 10) + str[i] - '0';
+        i++;
+    }
+    return (res * sign);
+}
+
+void ft_putnbr_mini(int a)
+{
+    char c;
+
+    if (a < 0)
+    {
+        write(1, "-", 1);
+        a *= -1;
+    }
+    if (a > 9)
+        ft_putnbr_mini(a / 10);
+    c = (a % 10) + '0';
+    write(1, &c, 1);        
 }
 
 int main(int argc, char **argv)
 {
-    int sum = 0;
-    int num = ft_atoi(argv[1]);
+    int num;
+    int sum;
+    int i;
 
-    if(argc == 2)
-    {
-        while(num > 2)
-        {
-            if(prime(num--))
-                sum += num + 1;
-        }
-        sum += 2;
-        ft_putnbr(sum);
-    }
-    else
+    num = ft_atoi_mini(argv[1]);
+    if (argc != 2 || !num)
         write(1, "0", 1);
-    
+    else
+    {
+        i = 2;
+        sum = 0;
+        while (i <= num)
+        {
+            if (is_prime(i))
+                sum += i;
+            i++;
+        }
+        ft_putnbr_mini(sum);
+    }
     write(1, "\n", 1);
     return 0;
 }
