@@ -1,0 +1,10 @@
+level 2 
+- print_pits
+- reverse_bits
+
+level 3
+- ft_atoi_base
+- ft_list_size
+- pgcd
+
+level 4

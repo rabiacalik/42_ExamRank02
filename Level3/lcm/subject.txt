@@ -3,26 +3,26 @@ Expected files   : lcm.c
 Allowed functions:
 --------------------------------------------------------------------------------
 
-Write a function who takes two unsigned int as parameters and returns the 
-computed LCM of those parameters.
+İki işaretsiz int'yi parametre olarak alan ve şu değeri döndüren bir işlev yazın:
+bu parametrelerin hesaplanan LCM'si.
 
-LCM (Lowest Common Multiple) of two non-zero integers is the smallest postive
-integer divisible by the both integers.
+Sıfır olmayan iki tam sayının LCM'si (En Düşük Ortak Kat), en küçük pozitif sayıdır
+her iki tam sayıya bölünebilen tamsayı.
 
-A LCM can be calculated in two ways:
+LCM iki şekilde hesaplanabilir:
 
-- You can calculate every multiples of each integers until you have a common
-multiple other than 0
+- Ortak bir sayı elde edene kadar her tam sayının katlarını hesaplayabilirsiniz.
+0 dışında birden fazla
 
-- You can use the HCF (Highest Common Factor) of these two integers and 
-calculate as follows:
+- Bu iki tamsayının HCF'sini (En Yüksek Ortak Faktör) kullanabilir ve
+aşağıdaki gibi hesaplayın:
 
 	LCM(x, y) = | x * y | / HCF(x, y)
   
-  | x * y | means "Absolute value of the product of x by y"
+  | x * y | "x'in y ile çarpımının mutlak değeri" anlamına gelir
 
-If at least one integer is null, LCM is equal to 0.
+En az bir tamsayı boşsa, LCM 0'a eşittir.
 
-Your function must be prototyped as follows:
+İşlevinizin prototipi aşağıdaki gibi olmalıdır:
 
   unsigned int    lcm(unsigned int a, unsigned int b);

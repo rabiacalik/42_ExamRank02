@@ -13,13 +13,13 @@ int	    is_power_of_2(unsigned int n)
     return (0);
 }
 
-int main()
+/*int main()
 {
     unsigned int sayi = 4;
     int sonuc;
 
     sonuc = is_power_of_2(sayi);
     printf("%d", sonuc);
-}
+}*/
 
 //fonksiyona gönderilecek olan sayinin 2 nin ussu olup omadigina bakildi
