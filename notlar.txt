@@ -1,6 +1,6 @@
 level 2 
-- print_pits
-- reverse_bits
+- print_pits +
+- reverse_bits +
 
 level 3
 - ft_atoi_base
@@ -8,3 +8,13 @@ level 3
 - pgcd
 
 level 4
+- flood_fill
+- ft_itoa
+- ft_list_foreach
+- ft_list_remove_if
+- sort_int_tab
+- sort_list
+
+
+kamoncik = (char **)malloc(sizeof(char *) * (word_count(str) + 1));
+kamoncik[j] = (char *)malloc(sizeof(char) * (word_size(str + i) + 1));
